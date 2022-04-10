@@ -1,4 +1,4 @@
-import { join } from "path";
+import { join, parse } from "path";
 import { existsSync } from "fs";
 
 /**
@@ -6,7 +6,8 @@ import { existsSync } from "fs";
  * @param cwd default `process.cwd()`
  */
 function getTsConfigPath(cwd: string = process.cwd()): string {
-  const tsconfigPath = join(cwd, "tsconfig.json");
+  const { ext } = parse(cwd);
+  const tsconfigPath = ext === ".json" ? cwd : join(cwd, "tsconfig.json");
   if (existsSync(tsconfigPath)) {
     return tsconfigPath;
   }
