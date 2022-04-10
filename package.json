@@ -1,6 +1,6 @@
 {
   "name": "parsed-tsconfig",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parse typescript tsconfig",
   "main": "lib/index.js",
   "types": "typings/index.d.ts",
