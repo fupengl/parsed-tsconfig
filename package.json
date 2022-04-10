@@ -14,6 +14,10 @@
     "lint:fix": "eslint --fix --ext js,jsx,ts,tsx src",
     "test": "jest"
   },
+  "files": [
+    "lib",
+    "typings"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fupengl/parsed-tsconfig.git"
